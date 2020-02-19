@@ -1,0 +1,10 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  labels:
+    prometheus: k8s
+  name: k8s
+  namespace: openshift-monitoring
+spec:
+  remoteWrite:
+    url: 10.46.9.101:19291
